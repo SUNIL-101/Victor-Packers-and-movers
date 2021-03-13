@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.landingPage {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(233, 116, 81, 0.5)), to(#e7717d));
+  background: linear-gradient(to bottom right, rgba(233, 116, 81, 0.5), #e7717d);
+  height: 100vh;
+}
+
+.container {
+  background-color: #05386b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.logo img {
+  height: 100%;
+  position: absolute;
+  left: 100px;
+  cursor: pointer;
+}
+
+.brand a {
+  position: absolute;
+  text-decoration: none;
+  left: 200px;
+  color: #c2cad0;
+  letter-spacing: 1px;
+  top: 0;
+  margin-top: 15px;
+  font-size: 1.3em;
+  font-family: 'Xanh Mono', monospace;
+}
+
+.bookNow {
+  position: absolute;
+  right: 10rem;
+  padding: 2px 15px;
+  font-size: 1.2rem;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 2px solid #00a36c;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bookNow a, .bookNow a:visited, .bookNow a:active {
+  text-decoration: none;
+  color: #edf5e1;
+}
+
+.bookNow:hover, .bookNow a:hover {
+  background-color: #e3e2df;
+  color: #00a36c;
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 50px;
+  margin: 5px 0;
+  background-color: #254a3f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menuList {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuList li {
+  display: inline-block;
+  margin-right: 25px;
+  margin-left: 25px;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.menuList li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.drop {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  background-color: blueviolet;
+  top: 38px;
+  right: -25px;
+}
+
+.drop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 500px) {
+  .brand a {
+    white-space: nowrap;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .logo img {
+    left: 10px;
+    height: 80%;
+    margin-top: 2%;
+  }
+  .bookNow {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
