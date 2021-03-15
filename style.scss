@@ -7,9 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap');
 
 .landingPage{
-    background: linear-gradient(to bottom right,rgba(233, 116, 81,.5),#e7717d);
+    background: url("images/home-bg.jpg") ;
+    background-size: cover;
+    // background: linear-gradient(to bottom right,teal,rgb(221, 101, 101),teal);
     height: 100vh;
 }
 
@@ -101,21 +104,183 @@
     color: white;
 }
 .dropdown{
-    position: relative;
+    position: relative;    
 }
 .drop{
     position: absolute;
+    display: none;
     height: 200px;
-    width: 100px;
-    background-color: blueviolet;
-    top: 38px;
-    right: -25px;
+    width: 150px;
+    left: 50%;
+    background-color: #254a3f;    
+    transform: translate(-50%,5%);
+    // right: px;
 }
 .drop ul{
     display: flex;
     // flex-flow: column wrap;
     flex-direction: column;
+    justify-content: space-around;    
+}
+.drop ul li{
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+.drop ul:first-child{
+    margin-top:15px;
+}
+.dropdown:hover .drop{
+    display: block;
+}
+.caro{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column wrap;
+    // width: 400%;
+    overflow: hidden;
+    align-items: center;
+
+}
+.caro h2{
+    margin: 15px;
+}
+
+.caro img{
+    width: 100%;
+}
+
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-flow: column; 
+    // background:#00a36c;
+    margin: 10px 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 2px 20px black;
+}
+.star h2{
+    margin: 15px;
+}
+.star img{
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+}
+.aboutPage{
+    height: 100vh;
+    position: relative;
+    display: flex;    
+    flex-flow: column;
+    // background:url("images/bg.jpeg");
+    // background-position:center;
+    background-size: cover;
+    background-image:linear-gradient(to top right,teal,red),url("https://images.pexels.com/photos/2908965/pexels-photo-2908965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-blend-mode:screen;    
+}
+.header{
+    position:absolute;
+    display: flex;
+    // justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.header h1{
+    position: relative;
+    font-size: 3em;
+    font-family: 'Major Mono Display', monospace;
+    color: rgba(32, 2, 31, 0.551);
+    text-shadow: 2px 2px 10px;
+}
+
+.header h1::after{
+    content: "";
+    position:absolute;
+    // justify-content: flex-end;
+    height: 2px;
+    width: 10%;
+    bottom: 0;
+    margin-left: 950px;
+    // left: 0;
+    // right: 0;
+    transform: translate(-1250%);        
+    background-color:rgb(58, 186, 15);
+    animation: bubu 3s ease-in-out 1s infinite alternate-reverse running;    
+    
+}
+@keyframes bubu{
+    0%{
+    
+        width: 10%;
+    }    
+    50%{
+        
+        width: 50%;
+    }
+    100%{
+        // right: 0;
+        width: 10%;
+    }
+}
+.header h1::first-letter{
+    font-size: 2em;
+    font-weight: 100;
+    color:teal;
+    font-family: 'Cutive Mono', monospace;
+}
+.content {
+    margin-top: 20px;
+    display: flex;
+    justify-content : space-evenly;
+    position:relative;
+    height: 70vh;
+    width:100%;
+    // background-color: red;
+    
+
+}
+.content p{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 40%;    
+    padding: 30px;
+    border: 3px solid teal;
+    margin:0 20px;
+    border-radius: 10px;
+    font-size: 1.5em;        
+    backdrop-filter: blur(3px);
+    color: white;
+    box-shadow: 2px 2px 30px 1px black;
+
+}
+.servicePage{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    background-color: teal; 
+    flex-direction: column;   
+    // justify-content: space-around;    
+}
+.servicePage h1{
+    text-align: center;
+    font-size:3em ;
+    letter-spacing: 3px;
+}
+.card1{
+    display: flex;
     justify-content: space-around;
+    margin:30px 0;
+}
+.cardImage{
+    height: 200px; 
+    flex-basis: 10%;
+}
+.cardImage img{    
+    height: 100%;
 }
 
 
