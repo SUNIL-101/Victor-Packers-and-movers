@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".logo").click("", () => {
+  $(".logo").click("", function() {
     $(".brand").toggle();
   });
   // $(".dropdown").click(function () {

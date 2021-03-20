@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -50,7 +52,7 @@
   top: 0;
   margin-top: 15px;
   font-size: 1.3em;
-  font-family: 'Xanh Mono', monospace;
+  font-family: "Xanh Mono", monospace;
 }
 
 .bookNow {
@@ -58,7 +60,7 @@
   right: 10rem;
   padding: 2px 15px;
   font-size: 1.2rem;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   letter-spacing: 2px;
   border-radius: 5px;
   border: 2px solid #00a36c;
@@ -66,12 +68,15 @@
   cursor: pointer;
 }
 
-.bookNow a, .bookNow a:visited, .bookNow a:active {
+.bookNow a,
+.bookNow a:visited,
+.bookNow a:active {
   text-decoration: none;
   color: #edf5e1;
 }
 
-.bookNow:hover, .bookNow a:hover {
+.bookNow:hover,
+.bookNow a:hover {
   background-color: #e3e2df;
   color: #00a36c;
 }
@@ -242,7 +247,7 @@
 .header h1 {
   position: relative;
   font-size: 3em;
-  font-family: 'Major Mono Display', monospace;
+  font-family: "Major Mono Display", monospace;
   color: rgba(32, 2, 31, 0.551);
   text-shadow: 2px 2px 10px;
 }
@@ -284,11 +289,11 @@
   }
 }
 
-.header h1::first-letter {
+.header h1::fir-letter {
   font-size: 2em;
   font-weight: 100;
   color: teal;
-  font-family: 'Cutive Mono', monospace;
+  font-family: "Cutive Mono", monospace;
 }
 
 .content {
@@ -339,29 +344,183 @@
           flex-direction: column;
 }
 
+.servicePage {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200vh;
+  background-color: teal;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .servicePage h1 {
   text-align: center;
   font-size: 3em;
   letter-spacing: 3px;
+  margin: 2% 0;
 }
 
-.card1 {
+.card1,
+.card2,
+.card3,
+.card4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 30px 0;
+  padding: 20px;
+  height: 250px;
 }
 
-.cardImage {
-  height: 200px;
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+.card2,
+.card4 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-.cardImage img {
+.card1 p,
+.card2 p,
+.card3 p,
+.card4 p {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  line-height: 1.5em;
+  padding: 1.5em;
+  font-size: 1.5rem;
+  color: #eaddca;
+  position: relative;
+}
+
+.card1 p::before,
+.card2 p::before,
+.card3 p::before,
+.card4 p::before {
+  content: "Household Shifting";
+  position: absolute;
+  top: -20px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: coral;
+}
+
+.card2 p::before {
+  content: "Corporate shifting";
+}
+
+.card3 p::before {
+  content: "Car Carriers";
+}
+
+.card4 p::before {
+  content: "International Move";
+}
+
+.cardImage,
+.cardImage2,
+.cardImage3,
+.cardImage4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 240px;
+  padding: 5px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0c4e4e), to(coral));
+  background: linear-gradient(to bottom right, #0c4e4e, coral);
+  -webkit-box-shadow: 0px 5px 20px -5px;
+          box-shadow: 0px 5px 20px -5px;
+}
+
+.cardImage img,
+.cardImage2 img,
+.cardImage3 img,
+.cardImage4 img {
   height: 100%;
+  border-radius: 10px;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background-color: #a79324;
+}
+
+.info,
+.banner {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #00a36c;
+}
+
+.info {
+  background-color: violet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.info h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+  padding: 5px;
+}
+
+.info input,
+.info textarea {
+  margin: 50px;
+  padding: 20px;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  background-color: transparent;
+}
+
+.info input,
+.info textarea,
+.info input:focus,
+.info textarea:focus {
+  color: whitesmoke;
+  font-size: 1em;
+  letter-spacing: 3px;
+}
+
+.info button {
+  margin: auto;
+  position: relative;
+  padding: 10px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  -webkit-box-shadow: 0 2px 20px -6px black;
+          box-shadow: 0 2px 20px -6px black;
+  color: teal;
 }
 
 @media only screen and (max-width: 500px) {
