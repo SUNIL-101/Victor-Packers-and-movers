@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
 *,
 *::after,
@@ -473,7 +474,9 @@
 }
 
 .info {
-  background-color: violet;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(black)), url("https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: linear-gradient(rgba(0, 0, 0, 0.1), black), url("https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,6 +491,13 @@
   text-align: center;
   margin: 10px 0 5px;
   padding: 5px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(coral), to(#0721cb));
+  background: linear-gradient(to right, coral, #0721cb);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .info input,
@@ -495,8 +505,8 @@
   margin: 50px;
   padding: 20px;
   outline: none;
-  border-color: transparent transparent black transparent;
-  background-color: transparent;
+  border-color: transparent transparent #0ebea3 transparent;
+  background: transparent;
 }
 
 .info input,
@@ -506,6 +516,22 @@
   color: whitesmoke;
   font-size: 1em;
   letter-spacing: 3px;
+}
+
+.info ::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+.info :-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.info ::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.info ::placeholder {
+  color: whitesmoke;
 }
 
 .info button {

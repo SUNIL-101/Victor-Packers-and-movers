@@ -9,6 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
 
 .landingPage {
@@ -360,7 +361,10 @@
   background-color: #00a36c;
 }
 .info {
-  background-color: violet;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url("https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  // background-color: violet;
   display: flex;
   position: relative;
   // justify-content: space-between;
@@ -369,14 +373,20 @@
     text-align: center;
     margin: 10px 0 5px;
     padding: 5px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2.3em;
+    letter-spacing: 2px;
+    background: linear-gradient(to right ,coral,rgb(7, 33, 203));
+    -webkit-background-clip: text;
+    color: transparent;
   }
   input,
   textarea {
     margin: 50px;
     padding: 20px;
     outline: none;
-    border-color: transparent transparent black transparent;
-    background-color: transparent;
+    border-color: transparent transparent hsl(171, 86%, 40%) transparent;
+    background: transparent;
   }
   input,
   textarea,
@@ -385,6 +395,9 @@
     color: whitesmoke;
     font-size: 1em;
     letter-spacing: 3px;
+  }
+  ::placeholder{
+    color: whitesmoke;
   }
   button {
     margin: auto;
