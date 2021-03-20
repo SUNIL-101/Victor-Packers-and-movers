@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
 .landingPage {
   background: url("images/home-bg.jpg");
@@ -38,8 +39,6 @@
   left: 100px;
   cursor: pointer;
   // width: 100%;
-}
-.brand {
 }
 .brand a {
   position: absolute;
@@ -353,7 +352,6 @@
 .contact {
   display: flex;
   height: 100vh;
-  background-color: rgb(167, 147, 36);
 }
 .info,
 .banner {
@@ -414,6 +412,89 @@
     box-shadow: 0 2px 20px -6px black;
     color: teal;
   }
+  button:hover{
+    color: whitesmoke;
+    background-color: teal;
+    transform: scale(1.1);
+    transition: transform 350ms ease-in-out;
+  }
+}
+
+.banner{
+  background:linear-gradient(rgb(0, 128, 0),rgb(0,0,0)), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position:top;
+  // background: linear-gradient(rgba(0,0,0,0.2),rgb(0,0,0));
+  // background-blend-mode: screen;
+  h1{
+    position: relative;
+    text-align: center;
+    margin: 10px 0 5px;
+    padding: 5px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2.3em;
+    letter-spacing: 2px;
+    background: linear-gradient(to right ,coral,rgb(7, 33, 203));
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  h3{
+    position: relative;
+    line-height: 30px;    
+    margin: 40px 0 30px 160px;
+  }
+  h3 div{
+    position: absolute;
+    height:60px;
+    top:50%;
+    left:-100px;        
+    transform: translateY(-50%);        
+  }
+  img{    
+    height:100%;             
+  }
+  .phn_icon,{
+    height: 46px;    
+  }
+  .email_icon{
+    height: 50px;
+  }
+  .email_ad{
+    margin-top: 60px;
+  }
+  .social{
+    text-align: center;
+    margin: 100px 0;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    background:url(https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip:text;
+    color: transparent;
+  }
+  .social_icons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px;
+    padding: 10px;
+    div{
+      cursor: pointer;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 20px -5px;
+      img{
+        height: 100%;
+      }
+    }
+    div:hover{
+        // transform: translateY(-10px);
+        transform: rotate(-35deg);
+    }
+  }  
 }
 
 //TODO MOBILE RESPONSIVE CODE STARTS

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
 *,
 *::after,
 *::before {
@@ -463,7 +464,6 @@
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  background-color: #a79324;
 }
 
 .info,
@@ -547,6 +547,111 @@
   -webkit-box-shadow: 0 2px 20px -6px black;
           box-shadow: 0 2px 20px -6px black;
   color: teal;
+}
+
+.info button:hover {
+  color: whitesmoke;
+  background-color: teal;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+.banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(green), to(black)), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background: linear-gradient(green, black), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: top;
+}
+
+.banner h1 {
+  position: relative;
+  text-align: center;
+  margin: 10px 0 5px;
+  padding: 5px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(coral), to(#0721cb));
+  background: linear-gradient(to right, coral, #0721cb);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.banner h3 {
+  position: relative;
+  line-height: 30px;
+  margin: 40px 0 30px 160px;
+}
+
+.banner h3 div {
+  position: absolute;
+  height: 60px;
+  top: 50%;
+  left: -100px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner img {
+  height: 100%;
+}
+
+.banner .phn_icon {
+  height: 46px;
+}
+
+.banner .email_icon {
+  height: 50px;
+}
+
+.banner .email_ad {
+  margin-top: 60px;
+}
+
+.banner .social {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
+  background: url(https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.banner .social_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.banner .social_icons div {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 20px -5px;
+          box-shadow: 0 2px 20px -5px;
+}
+
+.banner .social_icons div img {
+  height: 100%;
+}
+
+.banner .social_icons div:hover {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
 }
 
 @media only screen and (max-width: 500px) {
