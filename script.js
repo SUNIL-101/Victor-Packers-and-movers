@@ -5,4 +5,7 @@ $(document).ready(function () {
   // $(".dropdown").click(function () {
   //   $(".drop").toggle();
   // });
+  $(".two").hover(function(){
+    $(".drop2").fadeToggle();
+  });
 });

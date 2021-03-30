@@ -9,9 +9,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
 
 .landingPage {
   background: url("images/home-bg.jpg");
@@ -82,7 +84,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   margin: 5px 0;
   background-color: #254a3f;
@@ -109,32 +111,57 @@
 .dropdown {
   position: relative;
 }
-.drop {
+.drop{
   position: absolute;
-  display: none;
-  height: 200px;
-  width: 150px;
-  left: 50%;
-  background-color: #254a3f;
-  transform: translate(-50%, 5%);
-  // right: px;
-}
-.drop ul {
   display: flex;
-  // flex-flow: column wrap;
-  flex-direction: column;
-  justify-content: space-around;
+  background-color: coral;
+  z-index: 10;
+  height: 200px;
+  justify-content: space-between;
+  padding: 10px;
+  left:-20px;  
+  li{
+    margin: 20px ;
+    white-space: nowrap;
+    text-align: center;
+    flex: 1;
+    background-color: black;
+
+  } 
+  li:hover{
+    background-color: black;
+    width: 100%;
+    left: -20px;
+     
+  }
 }
-.drop ul li {
-  margin-bottom: 15px;
-  white-space: nowrap;
-}
-.drop ul:first-child {
-  margin-top: 15px;
-}
-.dropdown:hover .drop {
-  display: block;
-}
+
+// .drop {
+//   position: absolute;
+//   display: none;
+//   height: 200px;
+//   width: 150px;
+//   left: 50%;
+//   background-color: #254a3f;
+//   transform: translate(-50%, 5%);
+//   // right: px;
+// }
+// .drop ul {
+//   display: flex;
+//   // flex-flow: column wrap;
+//   flex-direction: column;
+//   justify-content: space-around;
+// }
+// .drop ul li {
+//   margin-bottom: 15px;
+//   white-space: nowrap;
+// }
+// .drop ul:first-child {
+//   margin-top: 15px;
+// }
+// .dropdown:hover .drop {
+//   display: block;
+// }
 .caro {
   display: flex;
   justify-content: flex-end;
@@ -144,13 +171,77 @@
   align-items: center;
 }
 .caro h2 {
+  position: relative;
+  font-size: 2.4rem;
   margin: 15px;
+  letter-spacing: 5px;
+  // -webkit-text-stroke:.1px black;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
 }
 
+@keyframes header {
+  0% {
+    background-position: bottom;
+    transition: all 10ms ease-in-out;
+  }
+  100% {
+    background-position: top;
+    transition: all 10ms ease-in-out;
+  }
+}
+.caro h2::before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 100px;
+  background-color: whitesmoke;
+  // animation: header 5s ease-in-out infinite alternate-reverse running;
+}
+.caro h2::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  transform: translateX(50%);
+  height: 1px;
+  width: 100px;
+  background-color: whitesmoke;
+}
+.caro_inner {
+  position: relative;
+  width: 100%;
+}
 .caro img {
   width: 100%;
 }
-
+.left,
+.right {
+  cursor: pointer;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.left img,
+.right img {
+  height: 100%;
+  opacity: 0.5;
+}
+.left {
+  left: 50px;
+  top: 50%;
+}
+.right {
+  right: 50px;
+  top: 50%;
+}
 .star {
   display: flex;
   justify-content: center;
@@ -225,7 +316,7 @@
     width: 10%;
   }
 }
-.header h1::fir-letter {
+.header h1::first-letter {
   font-size: 2em;
   font-weight: 100;
   color: teal;
@@ -266,6 +357,7 @@
   position: relative;
   display: flex;
   height: 200vh;
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.4), rgb(0, 0, 0));
   background-color: teal;
   flex-direction: column;
   // justify-content: space-around;
@@ -275,6 +367,10 @@
   font-size: 3em;
   letter-spacing: 3px;
   margin: 2% 0;
+  background: linear-gradient(to right, coral, rgb(7, 33, 203));
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-box-reflect: below -20px linear-gradient(rgba(20, 18, 18, 0.13), rgba(31, 25, 25, 0));
 }
 .card1,
 .card2,
@@ -371,10 +467,10 @@
     text-align: center;
     margin: 10px 0 5px;
     padding: 5px;
-    font-family: 'Lobster Two', cursive;
+    font-family: "Lobster Two", cursive;
     font-size: 2.3em;
     letter-spacing: 2px;
-    background: linear-gradient(to right ,coral,rgb(7, 33, 203));
+    background: linear-gradient(to right, coral, rgb(7, 33, 203));
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -394,7 +490,7 @@
     font-size: 1em;
     letter-spacing: 3px;
   }
-  ::placeholder{
+  ::placeholder {
     color: whitesmoke;
   }
   button {
@@ -412,91 +508,161 @@
     box-shadow: 0 2px 20px -6px black;
     color: teal;
   }
-  button:hover{
+  button:hover {
     color: whitesmoke;
     background-color: teal;
     transform: scale(1.1);
     transition: transform 350ms ease-in-out;
   }
 }
-
-.banner{
-  background:linear-gradient(rgb(0, 128, 0),rgb(0,0,0)), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-blend-mode: screen;
-  background-size: cover;
-  background-position:top;
+//>Contact us Banner
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url(https://images.pexels.com/photos/4793432/pexels-photo-4793432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  // background-blend-mode:exclusion;
+  // background-size: cover;
+  background-position: right top;
   // background: linear-gradient(rgba(0,0,0,0.2),rgb(0,0,0));
   // background-blend-mode: screen;
-  h1{
+  h1 {
     position: relative;
     text-align: center;
     margin: 10px 0 5px;
     padding: 5px;
-    font-family: 'Lobster Two', cursive;
+    font-family: "Lobster Two", cursive;
     font-size: 2.3em;
     letter-spacing: 2px;
-    background: linear-gradient(to right ,coral,rgb(7, 33, 203));
+    background: linear-gradient(to right, coral, rgb(7, 33, 203));
     -webkit-background-clip: text;
     color: transparent;
+    -webkit-box-reflect: below -20px linear-gradient(rgba(20, 18, 18, 0.216), rgba(31, 25, 25, 0));
   }
-  h3{
+  h3 {
     position: relative;
-    line-height: 30px;    
+    line-height: 30px;
     margin: 40px 0 30px 160px;
   }
-  h3 div{
+  h3 div {
     position: absolute;
-    height:60px;
-    top:50%;
-    left:-100px;        
-    transform: translateY(-50%);        
+    height: 60px;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
   }
-  img{    
-    height:100%;             
+  img {
+    height: 100%;
   }
-  .phn_icon,{
-    height: 46px;    
+  .phn_icon {
+    height: 46px;
   }
-  .email_icon{
+  .email_icon {
     height: 50px;
   }
-  .email_ad{
+  .email_ad {
     margin-top: 60px;
   }
-  .social{
+  //> Social Handles
+  .social {
     text-align: center;
     margin: 100px 0;
     font-size: 1.3rem;
     letter-spacing: 2px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-weight: bold;
-    background:url(https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background: url(https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
     background-position: center;
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
     color: transparent;
   }
-  .social_icons{
+  .social_icons {
     display: flex;
     justify-content: space-around;
     margin: 0 20px;
     padding: 10px;
-    div{
+    div {
       cursor: pointer;
       height: 50px;
       border-radius: 50%;
       box-shadow: 0 2px 20px -5px;
-      img{
+      img {
         height: 100%;
       }
     }
-    div:hover{
-        // transform: translateY(-10px);
-        transform: rotate(-35deg);
+    div:hover {
+      // transform: translateY(-10px);
+      transform: rotate(-35deg);
+      transition: transform 500ms ease-out;
     }
+  }
+  h3 {
+    letter-spacing: 2px;
+    font-family: "Inconsolata", monospace;
+    color: rgba(245, 245, 245, 1);
+  }
+}
+//? Footer page
+footer {
+  // margin: 20px 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #254a3f;
+  p {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-family: "Cutive Mono", monospace;
+    letter-spacing: 2px;
+  }
+}
+.test{
+  height: 100vh;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .links{
+    display: flex;
+    width: 500px;
+    justify-content:space-evenly;
+    flex-flow: wrap row;
+    background-color: coral;
+    li{
+      padding: 13px;
+      list-style:none;
+      background-color: rgba(255, 0, 0, 0.442);
+      a{
+        color: whitesmoke;
+        font-size: 1.4rem;      
+          text-decoration: none;
+      }
+    }    
   }  
 }
-
+.two{
+  position: relative;
+  // background-color: lime !important;  
+}
+.drop2{  
+  position: absolute; 
+  display: flex; 
+  flex-flow: wrap column;
+  left: 0;
+  top: 100%;
+  width: 100%;  
+          // background-color: yellow;
+          border: 1px solid lime;
+          padding: 10px;
+    li{
+      margin: 10px 0;
+      a{
+        text-align: center;
+      }    
+  } 
+}
+.drop2{
+  // display: none;
+}
 //TODO MOBILE RESPONSIVE CODE STARTS
 
 @media only screen and (max-width: 500px) {
@@ -511,6 +677,6 @@
     margin-top: 2%;
   }
   .bookNow {
-    display: none;
+    // display: none;
   }
 }

@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
 *,
 *::after,
 *::before {
@@ -91,7 +93,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   margin: 5px 0;
   background-color: #254a3f;
@@ -127,38 +129,33 @@
 
 .drop {
   position: absolute;
-  display: none;
-  height: 200px;
-  width: 150px;
-  left: 50%;
-  background-color: #254a3f;
-  -webkit-transform: translate(-50%, 5%);
-          transform: translate(-50%, 5%);
-}
-
-.drop ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  background-color: coral;
+  z-index: 10;
+  height: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  left: -20px;
 }
 
-.drop ul li {
-  margin-bottom: 15px;
+.drop li {
+  margin: 20px;
   white-space: nowrap;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: black;
 }
 
-.drop ul:first-child {
-  margin-top: 15px;
-}
-
-.dropdown:hover .drop {
-  display: block;
+.drop li:hover {
+  background-color: black;
+  width: 100%;
+  left: -20px;
 }
 
 .caro {
@@ -179,11 +176,100 @@
 }
 
 .caro h2 {
+  position: relative;
+  font-size: 2.4rem;
   margin: 15px;
+  letter-spacing: 5px;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
+}
+
+@-webkit-keyframes header {
+  0% {
+    background-position: bottom;
+    -webkit-transition: all 10ms ease-in-out;
+    transition: all 10ms ease-in-out;
+  }
+  100% {
+    background-position: top;
+    -webkit-transition: all 10ms ease-in-out;
+    transition: all 10ms ease-in-out;
+  }
+}
+
+@keyframes header {
+  0% {
+    background-position: bottom;
+    -webkit-transition: all 10ms ease-in-out;
+    transition: all 10ms ease-in-out;
+  }
+  100% {
+    background-position: top;
+    -webkit-transition: all 10ms ease-in-out;
+    transition: all 10ms ease-in-out;
+  }
+}
+
+.caro h2::before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  width: 100px;
+  background-color: whitesmoke;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
+}
+
+.caro h2::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  height: 1px;
+  width: 100px;
+  background-color: whitesmoke;
+}
+
+.caro_inner {
+  position: relative;
+  width: 100%;
 }
 
 .caro img {
   width: 100%;
+}
+
+.left,
+.right {
+  cursor: pointer;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+.left img,
+.right img {
+  height: 100%;
+  opacity: 0.5;
+}
+
+.left {
+  left: 50px;
+  top: 50%;
+}
+
+.right {
+  right: 50px;
+  top: 50%;
 }
 
 .star {
@@ -352,6 +438,8 @@
   display: -ms-flexbox;
   display: flex;
   height: 200vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(rgba(0, 0, 0, 0.4)), to(black));
+  background: linear-gradient(black, rgba(0, 0, 0, 0.4), black);
   background-color: teal;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -364,6 +452,11 @@
   font-size: 3em;
   letter-spacing: 3px;
   margin: 2% 0;
+  background: -webkit-gradient(linear, left top, right top, from(coral), to(#0721cb));
+  background: linear-gradient(to right, coral, #0721cb);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-box-reflect: below -20px linear-gradient(rgba(20, 18, 18, 0.13), rgba(31, 25, 25, 0));
 }
 
 .card1,
@@ -491,7 +584,7 @@
   text-align: center;
   margin: 10px 0 5px;
   padding: 5px;
-  font-family: 'Lobster Two', cursive;
+  font-family: "Lobster Two", cursive;
   font-size: 2.3em;
   letter-spacing: 2px;
   background: -webkit-gradient(linear, left top, right top, from(coral), to(#0721cb));
@@ -561,11 +654,9 @@
 }
 
 .banner {
-  background: -webkit-gradient(linear, left top, left bottom, from(green), to(black)), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background: linear-gradient(green, black), url(https://images.pexels.com/photos/1447366/pexels-photo-1447366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-blend-mode: screen;
-  background-size: cover;
-  background-position: top;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(black)), url(https://images.pexels.com/photos/4793432/pexels-photo-4793432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), black), url(https://images.pexels.com/photos/4793432/pexels-photo-4793432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: right top;
 }
 
 .banner h1 {
@@ -573,13 +664,14 @@
   text-align: center;
   margin: 10px 0 5px;
   padding: 5px;
-  font-family: 'Lobster Two', cursive;
+  font-family: "Lobster Two", cursive;
   font-size: 2.3em;
   letter-spacing: 2px;
   background: -webkit-gradient(linear, left top, right top, from(coral), to(#0721cb));
   background: linear-gradient(to right, coral, #0721cb);
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-box-reflect: below -20px linear-gradient(rgba(20, 18, 18, 0.216), rgba(31, 25, 25, 0));
 }
 
 .banner h3 {
@@ -618,7 +710,7 @@
   margin: 100px 0;
   font-size: 1.3rem;
   letter-spacing: 2px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: bold;
   background: url(https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
@@ -652,6 +744,103 @@
 .banner .social_icons div:hover {
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+}
+
+.banner h3 {
+  letter-spacing: 2px;
+  font-family: "Inconsolata", monospace;
+  color: whitesmoke;
+}
+
+footer {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #254a3f;
+}
+
+footer p {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: "Cutive Mono", monospace;
+  letter-spacing: 2px;
+}
+
+.test {
+  height: 100vh;
+  background-color: teal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.test .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  background-color: coral;
+}
+
+.test .links li {
+  padding: 13px;
+  list-style: none;
+  background-color: rgba(255, 0, 0, 0.442);
+}
+
+.test .links li a {
+  color: whitesmoke;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.two {
+  position: relative;
+}
+
+.drop2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border: 1px solid lime;
+  padding: 10px;
+}
+
+.drop2 li {
+  margin: 10px 0;
+}
+
+.drop2 li a {
+  text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
@@ -664,9 +853,6 @@
     left: 10px;
     height: 80%;
     margin-top: 2%;
-  }
-  .bookNow {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
