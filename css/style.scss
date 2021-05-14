@@ -16,7 +16,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
 
 .landingPage {
-  background: url("images/home-bg.jpg");
+  background: url("../images/home-bg.jpg");
   background-size: cover;
   // background: linear-gradient(to bottom right,teal,rgb(221, 101, 101),teal);
   height: 100vh;
@@ -200,10 +200,18 @@
   left: -70px;
   top: 50%;
   transform: translateX(-50%);
-  height: 1px;
+  height: 2px;
   width: 100px;
-  background-color: whitesmoke;
-  // animation: header 5s ease-in-out infinite alternate-reverse running;
+  background-color: transparent;
+  // border:2px solid red;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  // -webkit-background-clip: text;
+  color: transparent;
+  // background-color:red;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
+
 }
 .caro h2::after {
   content: "";
@@ -211,9 +219,16 @@
   right: -70px;
   top: 50%;
   transform: translateX(50%);
-  height: 1px;
+  height: 2px;
   width: 100px;
-  background-color: whitesmoke;
+  background-color: transparent;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  // -webkit-background-clip: text;
+  color: transparent;
+  // background-color:red;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
 }
 .caro_inner {
   position: relative;
@@ -489,6 +504,14 @@
     color: whitesmoke;
     font-size: 1em;
     letter-spacing: 3px;
+  }
+  textarea{
+    // resize: none;
+     max-width: 890px;
+     max-height: 168px;
+     min-width: 412px;
+     min-height: 142px;
+
   }
   ::placeholder {
     color: whitesmoke;

@@ -17,7 +17,7 @@
 }
 
 .landingPage {
-  background: url("images/home-bg.jpg");
+  background: url("../images/home-bg.jpg");
   background-size: cover;
   height: 100vh;
 }
@@ -221,9 +221,13 @@
   top: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 1px;
+  height: 2px;
   width: 100px;
-  background-color: whitesmoke;
+  background-color: transparent;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  color: transparent;
   animation: header 5s ease-in-out infinite alternate-reverse running;
 }
 
@@ -234,9 +238,14 @@
   top: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  height: 1px;
+  height: 2px;
   width: 100px;
-  background-color: whitesmoke;
+  background-color: transparent;
+  background: url(https://images.pexels.com/photos/673857/pexels-photo-673857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: bottom;
+  color: transparent;
+  animation: header 5s ease-in-out infinite alternate-reverse running;
 }
 
 .caro_inner {
@@ -377,7 +386,7 @@
   }
 }
 
-.header h1::fir-letter {
+.header h1::first-letter {
   font-size: 2em;
   font-weight: 100;
   color: teal;
@@ -609,6 +618,13 @@
   color: whitesmoke;
   font-size: 1em;
   letter-spacing: 3px;
+}
+
+.info textarea {
+  max-width: 890px;
+  max-height: 168px;
+  min-width: 412px;
+  min-height: 142px;
 }
 
 .info ::-webkit-input-placeholder {
